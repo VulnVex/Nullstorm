@@ -4,3 +4,10 @@ wget
 argparse
 colorama
 humanfriendly
+python
+python2
+python3
+python-pip
+pip
+pip2
+pip3

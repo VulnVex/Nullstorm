@@ -8,7 +8,7 @@ from tools.EMAIL.emailTools import ReadSenderEmail
 from time import sleep
 from colorama import Fore
 
-""" Check if site is under CloudFlare protection """
+""" Check if cloudflare is prothecting the websites ass """
 
 
 def __isCloudFlare(link):
@@ -21,7 +21,7 @@ def __isCloudFlare(link):
         for i in range(len(ipv4)):
             if ipaddress.ip_address(origin) in ipaddress.ip_network(ipv4[i]):
                 print(
-                    f"{Fore.RED}[!] {Fore.YELLOW}The site is protected by CloudFlare, attacks may not produce results.{Fore.RESET}"
+                    f"{Fore.RED}[!] {Fore.YELLOW}yea that niggas being protected by cloudshit,attacks may not be succesfull goddamit.{Fore.RESET}"
                 )
                 sleep(1)
     except socket.gaierror:
@@ -36,7 +36,7 @@ def __GetAddressInfo(target):
         ip = target.split(":")[0]
         port = int(target.split(":")[1])
     except IndexError:
-        print(f"{Fore.RED}[!] {Fore.MAGENTA}You must enter ip and port{Fore.RESET}")
+        print(f"{Fore.RED}[!] {Fore.MAGENTA}enter the ip and port asshole{Fore.RESET}")
         sys.exit(1)
     else:
         return ip, port
@@ -56,8 +56,8 @@ def __GetURLInfo(target):
 
 def __GetEmailMessage():
     server, username = ReadSenderEmail()
-    subject = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Enter the Subject (leave blank for random value): ")
-    body = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Enter Your Message (leave blank for random value): ")
+    subject = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}say tf yiu talking about (leave blank for random value): ")
+    body = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Enter the bullshit yiu wanna say (leave blank for random value): ")
     return [server, username, subject, body]
 
 """ Return target """
@@ -104,6 +104,6 @@ def InternetConnectionCheck():
         requests.get("https://google.com", timeout=4)
     except:
         print(
-            f"{Fore.RED}[!] {Fore.MAGENTA}Your device is not connected to the Internet{Fore.RESET}"
+            f"{Fore.RED}[!] {Fore.MAGENTA}your wifi is complete shit{Fore.RESET}"
         )
         sys.exit(1)

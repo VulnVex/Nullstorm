@@ -19,8 +19,8 @@ smtp_port = 587
 
 
 def WriteSenderEmail():
-    username = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Please enter your gmail address from which messages will be sent: {Fore.BLUE}")
-    password = getpass(f"{Fore.BLUE}[?] {Fore.MAGENTA}Please enter your gmail password: {Fore.BLUE}")
+    username = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}enter the goddamn gmail asshole: {Fore.BLUE}")
+    password = getpass(f"{Fore.BLUE}[?] {Fore.MAGENTA}now enter the fucking password: {Fore.BLUE}")
     server = SMTP(smtp_server, smtp_port)
     server.ehlo()
     server.starttls()
@@ -29,17 +29,17 @@ def WriteSenderEmail():
         server.login(username, password)
     except SMTPAuthenticationError:
         print(
-            f"{Fore.RED}[!] {Fore.MAGENTA}Wrong password from account or try enable this:"
+            f"{Fore.RED}[!] {Fore.MAGENTA}bro give me the acuall password asshole it doesent match:"
             f"\n    https://myaccount.google.com/lesssecureapps{Fore.RESET}"
         )
         sys.exit(1)
     else:
         print(
-            f"{Fore.GREEN}[+] {Fore.YELLOW}Successfully logged in{Fore.RESET}"
+            f"{Fore.GREEN}[+] {Fore.YELLOW}alr logged in{Fore.RESET}"
         )
 
     # Saved data to db?
-    confirm = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Should this information be retained for future reference? (y/n) : {Fore.BLUE}")
+    confirm = input(f"{Fore.BLUE}[?] {Fore.MAGENTA}Should this info be retained for future or what? (y/n) : {Fore.BLUE}")
     confirm = confirm.upper() in ("Y", "YES", "1", "TRUE")
     if confirm:
         # Write database
@@ -51,7 +51,7 @@ def WriteSenderEmail():
                 }, db
             )
         print(
-            f"{Fore.GREEN}[+] {Fore.YELLOW}Data saved to: {repr(sender_email_database)}{Fore.RESET}"
+            f"{Fore.GREEN}[+] {Fore.YELLOW}alr i saved the shi to: {repr(sender_email_database)}{Fore.RESET}"
         )
 
     return [server, username]
@@ -79,7 +79,7 @@ def ReadSenderEmail():
         )
     except SMTPAuthenticationError:
         print(
-            f"{Fore.RED}[!] {Fore.MAGENTA}Wrong email password{Fore.RESET}"
+            f"{Fore.RED}[!] {Fore.MAGENTA}Wrong password dumbass if you forgot it reset{Fore.RESET}"
         )
         os.remove(sender_email_database)
         sys.exit(1)

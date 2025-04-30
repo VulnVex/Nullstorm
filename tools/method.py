@@ -20,7 +20,7 @@ def GetMethodByName(method):
         dir = f"tools.L7.{method.lower()}"
     else:
         raise SystemExit(
-            f"{Fore.RED}[!] {Fore.MAGENTA}Unknown ddos method {repr(method)} selected..{Fore.RESET}"
+            f"{Fore.RED}[!] {Fore.MAGENTA}type in an acual method asshole i aint got time for this bullshit {repr(method)} alr selected...{Fore.RESET}"
         )
     module = __import__(dir, fromlist=["object"])
     if hasattr(module, "flood"):
@@ -56,7 +56,7 @@ class AttackMethod:
 
     # Exit
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print(f"{Fore.MAGENTA}[!] {Fore.BLUE}Attack completed!{Fore.RESET}")
+        print(f"{Fore.MAGENTA}[!] {Fore.BLUE}yea i fucked em up you good now.{Fore.RESET}")
 
     # Run time checker
     def __RunTimer(self):
@@ -86,7 +86,7 @@ class AttackMethod:
             self.threads.append(thread)
         # Start flood threads
         with Spinner(
-            label=f"{Fore.YELLOW}Starting {self.threads_count} threads{Fore.RESET}",
+            label=f"{Fore.YELLOW}now sit back and let daddy do the job. {self.threads_count} threads{Fore.RESET}",
             total=100,
         ) as spinner:
             for index, thread in enumerate(self.threads):
@@ -96,7 +96,7 @@ class AttackMethod:
         for index, thread in enumerate(self.threads):
             thread.join()
             print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}Stopped thread {index + 1}.{Fore.RESET}"
+                f"{Fore.GREEN}[+] {Fore.YELLOW}okay i stoped the threads goddayum {index + 1}.{Fore.RESET}"
             )
 
     # Start ddos attack
@@ -107,8 +107,8 @@ class AttackMethod:
             target = str(self.target).strip("()").replace(", ", ":").replace("'", "")
         duration = format_timespan(self.duration)
         print(
-            f"{Fore.MAGENTA}[?] {Fore.BLUE}Starting attack to {target} using method {self.name}.{Fore.RESET}\n"
-            f"{Fore.MAGENTA}[?] {Fore.BLUE}Attack will be stopped after {Fore.MAGENTA}{duration}{Fore.BLUE}.{Fore.RESET}"
+            f"{Fore.MAGENTA}[?] {Fore.BLUE}fucking {target} using ma {self.name}.{Fore.RESET}\n"
+            f"{Fore.MAGENTA}[?] {Fore.BLUE}ill show mercy after {Fore.MAGENTA}{duration}{Fore.BLUE}.{Fore.RESET}"
         )
         self.is_running = True
         try:
@@ -116,7 +116,7 @@ class AttackMethod:
         except KeyboardInterrupt:
             self.is_running = False
             print(
-                f"\n{Fore.RED}[!] {Fore.MAGENTA}Ctrl+C detected. Stopping {self.threads_count} threads..{Fore.RESET}"
+                f"\n{Fore.RED}[!] {Fore.MAGENTA}okay ill stop buzz killer {self.threads_count} threads..{Fore.RESET}"
             )
             # Wait all threads for stop
             for thread in self.threads:

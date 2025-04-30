@@ -23,9 +23,9 @@ def flood(target):
         server.sendmail(username, target, msg.encode("utf-8"))
     except Exception as err:
         print(
-            f"{Fore.MAGENTA}Error while sending mail\n{Fore.MAGENTA}{err}{Fore.RESET}"
+            f"{Fore.MAGENTA}fuck. i think i fucked up sending the email\n{Fore.MAGENTA}{err}{Fore.RESET}"
         )
     else:
         print(
-            f"{Fore.GREEN}[+] {Fore.YELLOW}Mail sent to {target}.{Fore.RESET}"
+            f"{Fore.GREEN}[+] {Fore.YELLOW}alr i sent your shi to {target}.{Fore.RESET}"
         )

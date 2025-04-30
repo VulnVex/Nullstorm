@@ -5,7 +5,7 @@ import platform
 from time import ctime
 from colorama import Fore
 
-""" This function will stop the program when a critical error occurs """
+""" yea this shi occurs when theres a goddamn error idgaf """
 
 
 def CriticalError(message, error):
@@ -29,7 +29,7 @@ def CriticalError(message, error):
     {Fore.MAGENTA}NODE: {platform.node()}
     {Fore.MAGENTA}TIME: {ctime()}
     {Fore.RED}:=== Report:
-    {Fore.MAGENTA}Please report it here: https://github.com/LimerBoy/Impulse/issues/new
+    {Fore.MAGENTA}yea contact nullvex.uio on instagram and ill see the problem alr piss off
     {Fore.RESET}
     """)
     sys.exit(5)

@@ -13,9 +13,9 @@ def flood(target):
             send(packet, verbose=False)
         except Exception as e:
             print(
-                f"{Fore.RED}[!] {Fore.MAGENTA}Error while sending 'ICMP'\n{Fore.MAGENTA}{e}{Fore.RESET}"
+                f"{Fore.RED}[!] {Fore.MAGENTA}nah our dear soldier failed to blow up 'ICMP'\n{Fore.MAGENTA}{e}{Fore.RESET}"
             )
         else:
             print(
-                f"{Fore.GREEN}[+] {Fore.YELLOW}ICMP packet send to {target[0]} {Fore.RESET}"
+                f"{Fore.GREEN}[+] {Fore.YELLOW}ALLAHU AKBAR BOMB DETONATED ON {target[0]} {Fore.RESET}"
             )

